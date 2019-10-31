@@ -1,8 +1,4 @@
-<?php ?>
+<h1>Hello world!</h1>
 
-<h1>Título de nível 1</h1>
-<h2>Título de nível 2</h2>
-<h3>Título de nível 3</h3>
-<h4>Título de nível 4</h4>
-<h5>Título de nível 5</h5>
-<h6>Título de nível 6</h6>
+https://github.com/bradtraversy/php_rest_myblog/tree/master/api/post
+https://www.youtube.com/watch?v=OEWXbpUMODk
