@@ -1,6 +1,6 @@
 <?php
 
-class Category
+class Inscricao
 {
     // DB Stuff
     private $conn;
@@ -19,13 +19,10 @@ class Category
         $this->conn = $db;
     }
 
-    // Create Category
     public function create()
     {
-        // Create Query
-        $query =  $query = 'INSERT INTO ' . $this->table . ' SET usuario = :usuario, evento = :evento, valor = :valor, status = :status, data_inscricao = :data_inscricao';
+        $query = $query = 'INSERT INTO ' . $this->table . ' SET usuario = :usuario, evento = :evento, valor = :valor, status = :status, data_inscricao = :data_inscricao';
 
-        // Prepare Statement
         $stmt = $this->conn->prepare($query);
 
         // Clean data
@@ -50,5 +47,100 @@ class Category
         // Print error if something goes wrong
         printf("Error: %s.\n", $stmt->error);
         return false;
+    }
+
+    public function update() {
+        // Create query
+        $query = 'UPDATE ' . $this->table . '
+                    SET valor = :valor, status = :status, data_inscricao = :data_inscricao
+                    WHERE usuario = :usuario
+                      AND evento = :evento';
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Clean data
+        $this->usuario = htmlspecialchars(strip_tags($this->usuario));
+        $this->evento = htmlspecialchars(strip_tags($this->evento));
+        $this->valor = htmlspecialchars(strip_tags($this->valor));
+        $this->status = htmlspecialchars(strip_tags($this->status));
+        $this->data_inscricao = htmlspecialchars(strip_tags($this->data_inscricao));
+
+        // Bind data
+        $stmt->bindParam(':usuario', $this->usuario);
+        $stmt->bindParam(':evento', $this->evento);
+        $stmt->bindParam(':valor', $this->valor);
+        $stmt->bindParam(':status', $this->status);
+        $stmt->bindParam(':data_inscricao', $this->data_inscricao);
+
+        // Execute query
+        if($stmt->execute()) {
+            return true;
+        }
+
+        // Print error if something goes wrong
+        printf("Error: %s.\n", $stmt->error);
+        return false;
+    }
+
+    public function delete() {
+        // Create query
+        $query = 'DELETE FROM ' . $this->table . ' 
+                    WHERE usuario = :usuario
+                      AND evento = :evento';
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Clean data
+        $this->usuario = htmlspecialchars(strip_tags($this->usuario));
+        $this->evento = htmlspecialchars(strip_tags($this->evento));
+
+        // Bind data
+        $stmt->bindParam(':usuario', $this->usuario);
+        $stmt->bindParam(':evento', $this->evento);
+
+        // Execute query
+        if($stmt->execute()) {
+            return true;
+        }
+
+        // Print error if something goes wrong
+        printf("Error: %s.\n", $stmt->error);
+        return false;
+    }
+
+    public function read()
+    {
+        $query = 'SELECT * FROM ' . $this->table . ' ORDER BY data_inscricao DESC';
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    public function read_id() {
+        $query = 'SELECT * FROM ' . $this->table . '
+                  WHERE usuario = ? AND evento = ? ';
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Bind ID
+        $stmt->bindParam(1, $this->usuario);
+        $stmt->bindParam(2, $this->evento);
+
+        // Execute query
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Set properties
+        $this->usuario = $row['usuario'];
+        $this->evento = $row['evento'];
+        $this->valor = $row['valor'];
+        $this->status = $row['status'];
+        $this->data_inscricao = $row['data_inscricao'];
     }
 }
