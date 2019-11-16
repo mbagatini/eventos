@@ -1,1 +1,1 @@
-<?php include_once('inscricoes.php'); ?>
+<?php include_once('inscricao.php'); ?>

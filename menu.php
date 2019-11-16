@@ -66,8 +66,12 @@
                         <i class="fas fa-user"></i>Minhas inscrições</a>
                 </li>
                 <li>
-                    <a href="eventos.php">
+                    <a href="evento.php">
                         <i class="fas fa-calendar-alt"></i>Eventos</a>
+                </li>
+                <li>
+                    <a href="certificado.php">
+                        <i class="fas fa-check-circle"></i>Validar certificado</a>
                 </li>
             </ul>
         </nav>
