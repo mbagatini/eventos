@@ -31,7 +31,7 @@ function popularInscricoes() {
                     + data[index].nome_evento
                     + '</td><td>'
                     + data[index].data_inscricao
-                    + '</td><td>R$ '
+                    + '</td><td>'
                     + data[index].valor
                     + '</td><td>'
                     + situacao
@@ -43,7 +43,7 @@ function popularInscricoes() {
                     '            <i class="zmdi zmdi-file"></i>' +
                     '        </button>' +
                     '        <button class="item" data-toggle="tooltip" data-placement="top"' +
-                    '                title="Cancelar inscrição">' +
+                    '                id="cancelar" title="Cancelar inscrição" onclick="cancelarInscricao()">' +
                     '            <i class="zmdi zmdi-calendar-remove"></i>' +
                     '        </button>' +
                     '    </div>' +
@@ -178,5 +178,34 @@ function inserirInscricao() {
             alert("Inscrição efetuada com sucesso");
             $('#staticModal').modal('toggle');
         }
+    });
+}
+
+function cancelarInscricao() {
+
+    $('#inscricoes').on('click', '#cancelar', function () {
+        var linha = $(this).closest('tr');
+
+        var ins = {
+            usuario: "4",
+            evento: linha.find('td:eq(0)').text(),
+            valor: linha.find('td:eq(3)').text(),
+            status: "E",
+            data_inscricao: linha.find('td:eq(2)').text()
+        };
+
+        $.ajax({
+            url: 'http://localhost/api_eventos/api/inscricao/update.php',
+            type: 'PUT',
+            dataType: 'JSON',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(ins),
+            error: function () {
+                alert("Não foi possível cancelar sua inscrição");
+            },
+            success: function () {
+                alert("Inscrição calcelada com sucesso");
+            }
+        });
     });
 }
