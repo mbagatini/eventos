@@ -26,7 +26,7 @@
                                         </div>
 
                                         <div class="table-responsive table-responsive-data2">
-                                            <table class="table table-data2">
+                                            <table class="table table-data2" id="table-eventos">
                                                 <thead>
                                                 <tr>
                                                     <th>código</th>
@@ -49,6 +49,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- modal static -->
+        <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+             aria-hidden="true"
+             data-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticModalLabel">Confirmação de inscrição</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" onclick="inserirInscricao()">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 </body>
