@@ -15,30 +15,40 @@
                         <img src="images/icon/logo.png" alt="">
                         <h2 class="title-1">Eventos</h2>
                     </div>
-                    <div class="login-form">
-                        <form action="" method="post">
+                    <form class="form-signin" role="form" action="logar.php" method="post">
+                        <div class="login-form">
                             <div class="form-group">
                                 <label>E-mail</label>
                                 <input class="au-input au-input--full" type="email" name="email" placeholder="E-mail">
                             </div>
                             <div class="form-group">
                                 <label>Senha</label>
-                                <input class="au-input au-input--full" type="password" name="password"
+                                <input class="au-input au-input--full" type="password" name="senha"
                                        placeholder="Senha">
                             </div>
-                            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Entrar</button>
-                        </form>
-                    </div>
+                            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">
+                                Entrar
+                            </button>
+                            <?php
+                            if (isset($_GET['loginFailed'])) {
+                                echo
+                                '<div class="alert alert-danger" role="alert">
+                                    Usuário ou senha inválidos
+                                </div>';
+                            }
+                            ?>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-
-<?php include_once('footer.html'); ?>
-
 </body>
+
+<?php include_once('footer.php'); ?>
+
+<script src="js/usuario.js"></script>
 
 </html>
 <!-- end document-->

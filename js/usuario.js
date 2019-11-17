@@ -4,7 +4,7 @@ function cadastrarUsuario() {
         nome: $("input[name=nome]").val(),
         cpf: $("input[name=cpf]").val(),
         email: $("input[name=email]").val(),
-        senha: $("input[name=senha]").val(),
+        senha: md5($("input[name=senha]").val()),
         endereco: $("input[name=endereco]").val()
     };
 

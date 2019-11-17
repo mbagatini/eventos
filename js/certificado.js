@@ -36,8 +36,10 @@ function gerarCertificado() {
 }
 
 function pdf(evento) {
+    var usuario = $('#id-usuario').val();
+
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://localhost/api_eventos/api/certificado/generate.php?usuario=4&evento=' + evento, true);
+    request.open('GET', 'http://localhost/api_eventos/api/certificado/generate.php?usuario=' + usuario + '&evento=' + evento, true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.responseType = 'blob';
 

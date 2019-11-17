@@ -64,7 +64,7 @@
 <script src="js/usuario.js"></script>
 
 <script>
-    $("input[name=cpf]").mask('000.000.000-00', {reverse: true});
+    $("input[name=cpf]").mask('000.000.000-00', {reverse: false});
 </script>
 
 </html>

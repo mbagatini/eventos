@@ -55,6 +55,7 @@
 
 <?php include_once('footer.php'); ?>
 
+<script src="js/usuario.js"></script>
 <script src="js/inscricao.js"></script>
 <script src="js/certificado.js"></script>
 

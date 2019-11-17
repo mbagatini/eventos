@@ -1,6 +1,8 @@
 function popularInscricoes() {
+    var usuario = $('#id-usuario').val();
+
     $.ajax({
-        url: 'http://localhost/api_eventos/api/inscricao/read_user.php?usuario=4',
+        url: 'http://localhost/api_eventos/api/inscricao/read_user.php?usuario=' + usuario,
         type: 'GET',
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
@@ -50,7 +52,8 @@ function popularInscricoes() {
                     '            <i class="zmdi zmdi-calendar-remove"></i>' +
                     '        </button>' +
                     '    </div>' +
-                    '</td></tr>')
+                    '</td></tr>' +
+                    '<tr class="spacer"></tr>')
             });
         }
 
@@ -105,7 +108,7 @@ function detalhesIncricao() {
 function inserirInscricao() {
 
     var ins = {
-        usuario: "4",
+        usuario: $('#id-usuario').val(),
         evento: $("#codigo").val(),
         valor: $("#valor").val(),
         status: "E",

@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+
+<input id="id-usuario" hidden value="<?php echo $_SESSION['id']?>">
+
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -22,5 +28,4 @@
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
-
 </head>

@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40c0eb6c-0539-435c-b8ec-14ba391b0efe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/usuario.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registrar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery.mask.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon/ava.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/md5/md5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/md5/md5.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/avatar-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/avatar-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/logo-blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/logo-mini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inscricao.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscricao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/certificado.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/certificado.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/inscricao.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/inscricao.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuario.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Inscricao.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +56,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/icon" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,13 +69,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adm\Documents\html\eventos\vendor" />
-      <recent name="C:\Users\adm\Documents\html\eventos\fpdf" />
       <recent name="C:\Users\adm\Documents\html\eventos\images\icon" />
+      <recent name="C:\Users\adm\Documents\html\eventos\vendor" />
+      <recent name="C:\Users\adm\Documents\html\eventos\vendor\md5" />
+      <recent name="C:\Users\adm\Documents\html\eventos\fpdf" />
       <recent name="C:\Users\adm\Documents\html\eventos" />
-      <recent name="C:\Users\adm\Documents\html\eventos\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adm\Documents\html\eventos\vendor\md5" />
       <recent name="C:\Users\adm\Documents\html\eventos" />
       <recent name="C:\Users\adm\Documents\html\eventos\js" />
       <recent name="C:\Users\adm\Documents\html\eventos\resources" />
@@ -97,7 +113,7 @@
       <workItem from="1573907849510" duration="874000" />
       <workItem from="1573909035316" duration="1355000" />
       <workItem from="1573910651374" duration="850000" />
-      <workItem from="1573911937140" duration="10768000" />
+      <workItem from="1573911937140" duration="22343000" />
     </task>
     <servers />
   </component>
