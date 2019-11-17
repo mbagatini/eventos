@@ -133,6 +133,10 @@ function inserirInscricao() {
         success: function () {
             alert("Inscrição efetuada com sucesso");
             $('#staticModal').modal('toggle');
+
+            var assunto = "Confirmação de inscrição";
+            var mensagem = "Olá, \n\nInformamos que sua inscrição para o evento foi efetuada.";
+            enviarEmail(assunto, mensagem);
         }
     });
 }
@@ -164,6 +168,10 @@ function cancelarInscricao() {
             },
             success: function () {
                 alert("Inscrição calcelada com sucesso");
+
+                var assunto = "Cancelamento de inscrição";
+                var mensagem = "Olá, \n\nInformamos que sua incrição para o evento foi cancelada.";
+                enviarEmail(assunto, mensagem);
             }
         });
     });
@@ -204,6 +212,10 @@ function confirmarCheckin() {
                     success: function () {
                         alert("Checkin realizado com sucesso");
                         $('#usuario').val('');
+
+                        var assunto = "Confirmação de presença";
+                        var mensagem = "Olá, \n\nInformamos que sua presença para o evento foi confirmada.";
+                        enviarEmail(assunto, mensagem);
                     }
                 });
 
@@ -221,6 +233,10 @@ function confirmarCheckin() {
                     success: function () {
                         alert("Checkin realizado com sucesso");
                         $('#usuario').val('');
+
+                        var assunto = "Confirmação de presença";
+                        var mensagem = "Olá, \n\nInformamos que sua presença para o evento foi confirmada.";
+                        enviarEmail(assunto, mensagem);
                     }
                 });
             }

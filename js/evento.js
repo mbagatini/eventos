@@ -16,7 +16,7 @@ function popularEventos() {
                 var situacao = "";
                 switch (data[index].status) {
                     case 'F':
-                        situacao = '<span class="status--denied">Finalizado</span>';
+                        situacao = '<span>Finalizado</span>';
                         break;
                     case 'C':
                         situacao = '<span class="status--denied">Cancelado</span>';

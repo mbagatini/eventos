@@ -28,6 +28,10 @@ function gerarCertificado() {
                 },
                 success: function () {
                     pdf(ins.evento);
+
+                    var assunto = "Emissão de certificado";
+                    var mensagem = "Olá, \n\nInformamos que o certificado de participação do evento foi gerado com sucesso.";
+                    enviarEmail(assunto, mensagem);
                 }
             });
         }
