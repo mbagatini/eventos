@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40c0eb6c-0539-435c-b8ec-14ba391b0efe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/certificado.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/certificado.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/evento.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/inscricao.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/usuario.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registrar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/jquery.mask.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eventos.php" beforeDir="false" afterPath="$PROJECT_DIR$/evento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inscricoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscricao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +41,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fpdf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,16 +53,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adm\Documents\html\eventos" />
-      <recent name="C:\Users\adm\Documents\html\eventos\js" />
-      <recent name="C:\Users\adm\Documents\html\eventos\resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adm\Documents\html\eventos\vendor" />
       <recent name="C:\Users\adm\Documents\html\eventos\fpdf" />
       <recent name="C:\Users\adm\Documents\html\eventos\images\icon" />
       <recent name="C:\Users\adm\Documents\html\eventos" />
-      <recent name="C:\Users\adm\Documents\html\eventos\vendor" />
+      <recent name="C:\Users\adm\Documents\html\eventos\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adm\Documents\html\eventos" />
+      <recent name="C:\Users\adm\Documents\html\eventos\js" />
       <recent name="C:\Users\adm\Documents\html\eventos\resources" />
     </key>
   </component>
@@ -101,7 +97,7 @@
       <workItem from="1573907849510" duration="874000" />
       <workItem from="1573909035316" duration="1355000" />
       <workItem from="1573910651374" duration="850000" />
-      <workItem from="1573911937140" duration="5616000" />
+      <workItem from="1573911937140" duration="10768000" />
     </task>
     <servers />
   </component>

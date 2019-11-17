@@ -12,6 +12,7 @@
             <div class="login-wrap">
                 <div class="login-content">
                     <div class="login-logo">
+                        <img src="images/icon/logo.png" alt="">
                         <h2 class="title-1">Eventos</h2>
                     </div>
                     <div class="login-form">
