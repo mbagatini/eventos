@@ -20,8 +20,11 @@ function popularInscricoes() {
                     case 'C':
                         situacao = '<span class="status--denied">Cancelado</span>';
                         break;
-                    case 'P':
+                    case 'I':
                         situacao = '<span class="status--process">Inscrito</span>';
+                        break;
+                    case 'P':
+                        situacao = '<span class="status--process">Confirmado</span>';
                         break;
                     case 'E':
                         situacao = 'Encerrado';
@@ -111,7 +114,7 @@ function inserirInscricao() {
         usuario: $('#id-usuario').val(),
         evento: $("#codigo").val(),
         valor: $("#valor").val(),
-        status: "E",
+        status: "I",
         data_inscricao: getDateFormatted()
     };
 
@@ -140,10 +143,10 @@ function cancelarInscricao() {
         var linha = $(this).closest('tr');
 
         var ins = {
-            usuario: "4",
+            usuario: $('#id-usuario').val(),
             evento: linha.find('td:eq(0)').text(),
             valor: linha.find('td:eq(3)').text(),
-            status: "E",
+            status: "C",
             data_inscricao: linha.find('td:eq(2)').text()
         };
 
@@ -163,5 +166,64 @@ function cancelarInscricao() {
                 alert("Inscrição calcelada com sucesso");
             }
         });
+    });
+}
+
+function confirmarCheckin() {
+
+    var ins = {
+        usuario: $('#usuario').val(),
+        evento: $('#evento').val(),
+        valor: '0',
+        status: 'P',
+        data_inscricao: getDateFormatted()
+    };
+
+    $.ajax({
+        url: 'http://localhost/api_eventos/api/inscricao/read_id.php?usuario=' + ins.usuario + '&evento=' + ins.evento,
+        type: 'GET',
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        error: function (request, status, erro) {
+            alert("Não foi possível carregar os eventos");
+        },
+        success: function (data) {
+            if (data.data_inscricao != null) {
+                ins = data;
+                ins.status = 'P';
+
+                $.ajax({
+                    url: 'http://localhost/api_eventos/api/inscricao/update.php',
+                    type: 'PUT',
+                    dataType: 'JSON',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(ins),
+                    error: function (request, status, erro) {
+                        alert("Não foi possível confirmar o checkin");
+                    },
+                    success: function () {
+                        alert("Checkin realizado com sucesso");
+                        $('#usuario').val('');
+                    }
+                });
+
+            } else {
+
+                $.ajax({
+                    url: 'http://localhost/api_eventos/api/inscricao/create.php',
+                    type: 'POST',
+                    dataType: 'JSON',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(ins),
+                    error: function (request, status, erro) {
+                        alert("Não foi possível confirmar o checkin");
+                    },
+                    success: function () {
+                        alert("Checkin realizado com sucesso");
+                        $('#usuario').val('');
+                    }
+                });
+            }
+        }
     });
 }

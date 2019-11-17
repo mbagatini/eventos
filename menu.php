@@ -35,7 +35,7 @@
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
                                         <a href="#">
-                                            <i class="zmdi zmdi-account"></i>Account</a>
+                                            <i class="zmdi zmdi-account"></i>Conta</a>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
@@ -72,6 +72,10 @@
                 <li>
                     <a href="certificado.php">
                         <i class="fas fa-check-circle"></i>Validar certificado</a>
+                </li>
+                <li>
+                    <a href="checkin.php">
+                        <i class="fas fa-calendar-check-o"></i>Checkin</a>
                 </li>
             </ul>
         </nav>

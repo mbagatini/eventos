@@ -28,7 +28,8 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary" onclick="validarCertificado()">Validar</button>
+                                <button type="submit" class="btn btn-primary" onclick="validarCertificado()">Validar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -36,6 +37,7 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 
 <?php include_once('footer.php'); ?>
