@@ -22,6 +22,11 @@ function cadastrarUsuario() {
         },
         success: function () {
             alert('Usuário cadastrado com sucesso');
+
+            var assunto = "Bem-vindo";
+            var mensagem = "Olá, \n\nSeja bem-vindo a nossa plataforma de eventos!";
+            enviarEmail(assunto, mensagem);
+
             window.location.href = 'login.php';
         }
     });
@@ -57,6 +62,12 @@ function inscricaoRapida() {
                 },
                 success: function (data) {
                     alert("Usuário cadastrado com sucesso");
+
+                    var assunto = "Bem-vindo";
+                    var mensagem = "Olá, \n\nSeja bem-vindo a nossa plataforma de eventos! \n\n"+
+                                   "Você deve completar seu cadastro pelo nosso site, para isso, utilize a senha \"123\" para fazer login. ";
+                    enviarEmail(assunto, mensagem);
+
                     $('#staticModal').modal('toggle');
                     $('#usuario').val(data.id);
                 }
