@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<input id="id-usuario" hidden value="<?php echo $_SESSION['id']?>">
+<input id="id-usuario" hidden value="<?php echo (isset($_SESSION['id']) ? $_SESSION['id'] : '') ?>">
 
 <head>
     <!-- Required meta tags-->
